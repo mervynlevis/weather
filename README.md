@@ -6,7 +6,7 @@ npm start
 
 npm install 
 
-/ axios /
+/ axios / <br />
 react-animated-weather /
 react-live-clock / 
 @material-ui/icons /
@@ -43,7 +43,7 @@ https://mervynlevis.github.io/weather/
 
 npm run test
 
-Unit Tests located in __tests__ folder within components folder.
+Unit Tests located in __tests__ folder within components folder. / 
 note: alert not supported by jest, will throw error but all tests should pass.
 
 # Info 
@@ -56,4 +56,4 @@ The app consists of two main components, CurrentLocation, a class based componen
 
 CurrentLocation initially loads a loading screen with a gif loader animation. The component checks if the user has enabled location services. If they have, it will grab their latitude and longitude, and call the openWeather API. The component will then update, loading the mainpage with the users weather information, on the main section of the page. If the user declines to enable location services when prompted, the app will return the weather information for Dublin, Ireland. 
 
-Forecast renders with the default compare weather information, which has been set to Cork, Ireland. The user can then search for another city, which will replace the default weather information with the queried city. This is a functional component, and uses axios to call the api.
+Forecast renders with the default compare weather information, which has been set to Cork, Ireland. The user can then search for another city, which will replace the default weather information with the queried city. This is a functional component, and uses axios to call the api. The user enters a city name and a country code to display the weather. This country code functionality was added to avoid issues with duplicate city names returning the wrong city when queried by city alone. eg "Dublin Ireland" returning weather for "Dublin US".
