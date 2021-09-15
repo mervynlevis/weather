@@ -12,28 +12,31 @@ react-live-clock <br />
 @material-ui/icons <br />
 @testing-library/jest-dom 
 
+<br />
+<br />
 
 from package-lock.json:
 
-"packages": {
-  "": {
-    "version": "0.1.0",
-    "dependencies": {
-      "@testing-library/react": "^11.2.7",
-      "@testing-library/user-event": "^12.8.3",
-      "axios": "^0.21.4",
-      "react": "^17.0.2",
-      "react-animated-weather": "^4.0.1",
-      "react-dom": "^17.0.2",
-      "react-live-clock": "^5.2.0",
-      "react-scripts": "4.0.3",
-      "web-vitals": "^1.1.2"
+  "packages": {
+    "": {
+      "version": "0.1.0",
+      "dependencies": {
+        "@material-ui/icons": "^4.11.2",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3",
+        "axios": "^0.21.4",
+        "react": "^17.0.2",
+        "react-animated-weather": "^4.0.1",
+        "react-dom": "^17.0.2",
+        "react-live-clock": "^5.2.0",
+        "react-scripts": "4.0.3",
+        "web-vitals": "^1.1.2"
+      },
+      "devDependencies": {
+        "@testing-library/jest-dom": "^5.14.1",
+        "gh-pages": "^3.2.3"
+      }
     },
-    "devDependencies": {
-      "@testing-library/jest-dom": "^5.14.1",
-      "gh-pages": "^3.2.3"
-    }
-  }
 
 # Hosted on GitHub Pages 
 
