@@ -215,6 +215,10 @@ div#txt {
   background-color: #585D71;
 }
 
+.img-box {
+  color: #f9f9f9;
+}
+
 .forecast-icon {
   padding: 25px 0;
 }

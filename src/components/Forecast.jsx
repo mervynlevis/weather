@@ -2,29 +2,33 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import apiKeys from "./apiKey";
 import ReactAnimatedWeather from "react-animated-weather";
+import SearchIcon from "@material-ui/icons/Search";
 import Footer from "./Footer";
 
 function Forecast(props) {
   const [query, setQuery] = useState("");
+  const [searchCountry, setSearchCountry] = useState("");
   const [error, setError] = useState("");
   const [weather, setWeather] = useState({});
 
   // fetch weather information based on user query string. default is set to Cork, so that will be initially displayed
   const search = (city) => {
+    //used != rather than !== here as ran into error with weather search when using !== syntax
     axios
       .get(
-        `${apiKeys.base}weather?q=${
-          city != "[object Object]" ? city : query //used != rather than !== here as ran into error with weather search when using !== syntax
-        }&units=metric&APPID=${apiKeys.key}`
+        `${apiKeys.base}weather?q=${city != "[object Object]" ? city : query 
+        },${searchCountry}&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
         setWeather(response.data);
         setQuery("");
+        setSearchCountry("");
       })
       .catch(function (error) {
         console.log(error);
         setWeather("");
         setQuery("");
+        setSearchCountry("");
         setError({ message: "Not Found", query: query });
       });
   };
@@ -68,13 +72,16 @@ function Forecast(props) {
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="Country Code"
+            onChange={(e) => setSearchCountry(e.target.value)}
+            value={searchCountry}
+          />
           <div className="img-box">
             {" "}
-            <img
-              src="https://images.avishkaar.cc/workflow/newhp/search-white.png"
-              onClick={search}
-              alt="search button"
-            />
+            <SearchIcon className="img-box" onClick={search} />
           </div>
         </div>
         <ul>

@@ -6,10 +6,11 @@ npm start
 
 npm install 
 
-axios 
-react-animated-weather 
-react-live-clock
-@testing-library/jest-dom
+/ axios /
+react-animated-weather /
+react-live-clock / 
+@material-ui/icons /
+@testing-library/jest-dom /
 
 
 from package-lock.json:
