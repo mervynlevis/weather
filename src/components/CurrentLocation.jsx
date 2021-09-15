@@ -72,7 +72,7 @@ class Weather extends React.Component {
         })
         .catch((err) => {
           // if no location services then standard location weather for Dublin will be displayed
-          this.getWeather(53.34, -6.26);
+          this.getWeather(53.34, -6.26); //lat lon for Dublin, Ireland
           alert(
             "Location Services Disabled. Please allow location access to use this app."
           );

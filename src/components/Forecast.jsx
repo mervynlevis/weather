@@ -29,12 +29,12 @@ function Forecast(props) {
       });
   };
 
-//   function checkTime(i) {
-//     if (i < 10) {
-//       i = "0" + i;
-//     } // add zero in front of numbers < 10
-//     return i;
-//   }
+  //   function checkTime(i) {
+  //     if (i < 10) {
+  //       i = "0" + i;
+  //     } // add zero in front of numbers < 10
+  //     return i;
+  //   }
 
   const defaults = {
     color: "white",
@@ -42,14 +42,14 @@ function Forecast(props) {
     animate: true,
   };
 
-  // empty array so avoid duplicate API calls 
+  // empty array so avoid duplicate API calls
   useEffect(() => {
     search("Cork");
   }, []);
 
-  // render component with api data 
+  // render component with api data
   return (
-    <div data-testid='searchedForecast' className="forecast">
+    <div data-testid="searchedForecast" className="forecast">
       <div className="forecast-icon">
         <ReactAnimatedWeather
           icon={props.icon}
@@ -64,7 +64,7 @@ function Forecast(props) {
           <input
             type="text"
             className="search-bar"
-            placeholder="Search any city"
+            placeholder="Search any City"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
