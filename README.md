@@ -6,7 +6,7 @@ npm install axios react-animated-weather react-live-clock @material-ui/icons
 
 You will need to create a .env file with and provide an openweatherAPI key to run the app. The code you need to include in the .env is the following: <br />
 
-REACT_APP_API_KEY=YOUR_API_KEY_HERE
+REACT_APP_API_KEY=your_api_key_here
 
 npm start
 
