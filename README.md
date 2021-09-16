@@ -1,5 +1,13 @@
 # To Run
 
+npm install
+
+npm install axios react-animated-weather react-live-clock @material-ui/icons
+
+You will need to create a .env file with and provide an openweatherAPI key to run the app. The code you need to include in the .env is the following: <br />
+
+REACT_APP_API_KEY=YOUR_API_KEY_HERE
+
 npm start
 
 # NPM dependencies 
@@ -10,7 +18,6 @@ axios <br />
 react-animated-weather <br />
 react-live-clock <br />
 @material-ui/icons <br />
-@testing-library/jest-dom 
 
 <br />
 <br />
@@ -46,10 +53,12 @@ https://mervynlevis.github.io/weather/
 
 npm run test
 
-Unit Tests located in __tests__ folder within components folder. / 
+Unit Tests located in __tests__ folder within components folder. <br /> 
 note: alert not supported by jest, will throw error but all tests should pass.
 
-# Info 
+# Information
+
+App hosted on github pages, second branch contains GH pages build.
 
 This app was built using react, using both class based and functional components. The app, if location services are enabled, will fetch the location and weather data for their location. This will load the main page of the app.
 

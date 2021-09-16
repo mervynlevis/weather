@@ -12,11 +12,13 @@ function Forecast(props) {
   const [weather, setWeather] = useState({});
 
   // fetch weather information based on user query string. default is set to Cork, so that will be initially displayed
+  //used != rather than !== here as ran into error with weather search when using !== syntax
+
   const search = (city) => {
-    //used != rather than !== here as ran into error with weather search when using !== syntax
     axios
       .get(
-        `${apiKeys.base}weather?q=${city != "[object Object]" ? city : query 
+          // eslint-disable-next-line
+        `${apiKeys.base}weather?q=${city != "[object Object]" ? city : query
         },${searchCountry}&units=metric&APPID=${apiKeys.key}`
       )
       .then((response) => {
@@ -46,12 +48,15 @@ function Forecast(props) {
     animate: true,
   };
 
-  // empty array so avoid duplicate API calls
+  // empty array so avoid duplicate API calls, disabled eslint warning.
   useEffect(() => {
     search("Cork");
+      // eslint-disable-next-line
   }, []);
 
   // render component with api data
+  // if there is weather information, render it. Otherwise, render the error message
+
   return (
     <div data-testid="searchedForecast" className="forecast">
       <div className="forecast-icon">
@@ -68,7 +73,7 @@ function Forecast(props) {
           <input
             type="text"
             className="search-bar"
-            placeholder="Search any City"
+            placeholder="Search City"
             onChange={(e) => setQuery(e.target.value)}
             value={query}
           />
