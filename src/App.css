@@ -76,9 +76,15 @@ img {
   height: auto;
   padding: 1% 0%;
   position: absolute;
-  top: 1px;
-  left: 12px;
+  top: 40px;
+  left: -15px;
   z-index: 1;
+  color: #585D71;
+  transform: scale(4.5);
+}
+
+.brandLogo:hover {
+  color: #F2F2F2;
 }
 
 /* LOADING PAGE  */
@@ -298,6 +304,9 @@ div#txt {
     color: #fff;
     font-size: 3em;
     margin-top: 20%;
+  }
+  .brandLogo {
+    transform: scale(3);
   }
 }
 

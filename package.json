@@ -4,7 +4,10 @@
   "private": true,
   "homepage": "https://mervynlevis.github.io/weather",
   "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.0.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.4",
